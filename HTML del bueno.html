@@ -1,0 +1,146 @@
+<!--DOCTYPE Comunica al navegador que es un archivo HTML-->
+<!DOCTYPE html>
+
+<!--"head" es metadata no dirigida al usuario-->
+<head>
+    <!--"title" le da nombre a pestaña del navegador -->
+    <title>Apuntes HTML</title>
+    <style>
+        table, th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+
+<!--"body" es el contenido dirigido al usuarios-->
+<body>
+    
+    <!--Los "h" marcan titulos y subtitulos en el contenido -->
+    <h1>Esto es un titulo</h1>
+    <h2>Esto es un titulo</h2>
+    <h3>Esto es un titulo</h3>
+    <h4>Esto es un titulo</h4>
+    <h5>Esto es un titulo</h5>
+    <h6>Esto es un titulo</h6>
+
+    <!--"hr" crea diviciones en el contenido de la pagina-->
+    <hr> 
+
+    <!--"p" indica parrafos-->
+    <p>Esto es un parrafo con mucho contenido</p>
+    <p>Esto es un segundo parrafo con mucho contenido</p>
+    
+    <!--"span" selecciona una parte del texto para aplicarle modificaciones con CSS-->
+    <p>Esto es un parrafo en el que <span>ESTO</span> esta seleccionado son span</p>
+    <p>Esto es un parrafo en el que <span style="color:blue">ESTO</span> esta seleccionado son span y modificado con CSS</p>
+
+    <!--"br" hace saltos de linea-->
+    <p>Esto es un parrafo muy largo <br> es cual fue separado con "br" </p>
+    
+    <!--"a" crea hiperbinculos usando la misma pestaña-->
+    <a href="https://www.google.cl">Ir a Google con esta pestana</a><br>
+
+    <!--"target" hace que el link se habra en una nueva pastaña-->
+    <a target="_blank" href="https://www.google.cl">Ir a Google con una nueva pestana</a><br>
+
+    <!--"img /" agrega imagenes desde una ruta web o local (src) y con el tamaño que queramos (width y height)-->
+    <img src="https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/59c4f5655bafe82c692a7052/gato-marron_0.jpg" width="300" height="200"/>
+    <img src="nave.jpg" width="300" height="200" />
+
+    <!--"form" indica formularios, "action" la ruta de envio y "metod" el como se envia, "get" es por la url "post" por-->
+    <!--"input/" los campos de entrada de datos-->
+    <!--"label" es una etiqueta que con "for" e "id" se púede ligar a un "input"-->
+    <!--"name" asigna la llave pare que el server sepa que dato y "placeholder" muestra dentro del casillero el dato deseado-->
+    <!--"type" define que tipo de dato se espera y "value" da un valor por defecto-->
+    <form action="/ruta.php" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aqui"/><br>
+
+        <label for="Mail">Mail</label>
+        <input value="juanito@email.com" type="email" id="Mail" name="Mail" placeholder="Tu mail aqui"/><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Tu password aqui"/><br>        
+
+        <label for="file">Archivo</label>
+        <input type="file" id="file" name="file" /><br>  
+
+        <label for="checkbox">Checkbox</label>
+        <input type="checkbox" id="checkbox" name="checkbox" /><br> 
+
+        <label for="radio">Radio</label>
+        <input type="radio" id="radio" name="radio" /><br> 
+
+        <label for="enviar">Enviar</label>
+        <input type="submit" id="enviar" name="enviar"/><br>  
+
+        <!--"textarea" para ingresar texto, el tamaño se maneja con "rows" y "cols"-->
+        <label for="comentario">Comentario</label><br>
+        <textarea id="comentario" cols="50" rows="10" name="comentario" placeholder="Algo que dediir?"></textarea><br>
+
+        <!--"button"crea botones personalizados, types=["button","submit","reset"], "button" tiene funcionalidad con javascrip -->
+        <button type="button">Soy un boton</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+
+        <!--imagen con boton-->
+        <button type="button"><img src="nave.jpg" width="300" height="200" />Soy un boton</button>
+    </form>
+    <!--"ul" es lista no ordenada,"ol" es lista ordenada, "li" es elemento de la lista-->
+    <ul>
+        <li>Elemento lista 1</li>
+        <li>Elemento lista 2</li>
+        <li>Elemento lista 3</li>
+    </ul>
+    <ol>
+        <li>Elemento lista 1</li>
+        <li>Elemento lista 2</li>
+        <li>Elemento lista 3</li>
+    </ol>   
+    
+    <!--las listas son anidables, "value" define el valor del elemento y "style" el tipo de numeracion-->
+    <ol>
+        <li value="50">Elemento lista 1</li>
+        <li>Elemento lista 2</li>
+        <li>Elemento lista 3</li>
+        <ol>
+            <li style="list-style: upper-alpha;">Sub 1</li>
+            <li style="list-style: upper-alpha;">Sub 2</li>
+            <li style="list-style: upper-alpha;">Sub 3</li>
+        </ol>
+    </ol>
+    
+    <!--"table" agrega tablas, "tr" agrega una fila, "th" una cabezera, "td" contenido de la celda, "thead" indica al navegador que es cabecera, "tbody" indica al navegador que es contenido, "tfoot" indica el final de la tabla-->
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Arduino</td>
+                <td>5000</td>
+            </tr>
+
+            <tr>            
+                <td>Taza</td>
+                <td>3500</td>
+            </tr>
+            <tr>            
+                <td>Auto</td>
+                <td>2500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr></tr>
+            <tr>            
+                <td></td>
+                <td>Total: 11000</td>
+            </tr>           
+        </tfoot>
+    </table>
+
+</body>
+</html>
